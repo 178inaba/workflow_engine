@@ -78,9 +78,9 @@ $app->singleton(
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
-// $app->register(App\Providers\EventServiceProvider::class);
+$app->configure('ytake-laravel-smarty');
+$app->register(Ytake\LaravelSmarty\SmartyServiceProvider::class);
+$app->register(Ytake\LaravelSmarty\SmartyConsoleServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
