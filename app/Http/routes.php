@@ -11,4 +11,7 @@
 |
 */
 
-$app->get('/', 'Index@index');
+$app->get('/', [
+    'middleware' => 'auth',
+    'uses' => 'Index@index'
+]);
