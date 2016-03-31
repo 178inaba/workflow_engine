@@ -4,7 +4,7 @@ workflow_engine is minimal workflow engine.
 
 ## framework
 
-[lumen](https://lumen.laravel.com/)
+[laravel](https://laravel.com/)
 
 ## licence
 
