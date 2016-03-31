@@ -15,3 +15,6 @@ $app->get('/', [
     'middleware' => 'auth',
     'uses' => 'Index@index'
 ]);
+
+$app->get('login', 'Login@index');
+$app->post('login', 'Login@login');
