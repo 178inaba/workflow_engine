@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
     public function up()
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->string('company_id', 64);
+            $table->string('company_id', 64)->index();
             $table->string('id', 64);
             $table->string('name', 255);
             $table->string('email', 255);
@@ -25,9 +25,6 @@ class CreateUsersTable extends Migration
             // primary
             $table->primary(['company_id', 'id']);
             $table->unique(['company_id', 'email']);
-
-            // foreign key
-            $table->foreign('company_id')->references('id')->on('companies');
         });
     }
 
