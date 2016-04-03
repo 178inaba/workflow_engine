@@ -6,6 +6,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">registration your company!</div>
           <div class="panel-body">
+            {include file='common/errors.tpl' errors=$errors}
             <form action="/company_registration" method="post">
               {csrf_field()}
               <p>company id:<input type="text" name="company_id"></p>
