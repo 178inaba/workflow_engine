@@ -15,7 +15,7 @@ class IndexController extends Controller
     {
         if ($req->user()) {
             // login
-            return;
+            return view('user.index');
         } else {
             // not login
             return view('index');
