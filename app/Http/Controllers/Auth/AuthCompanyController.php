@@ -57,7 +57,7 @@ class AuthCompanyController extends Controller
      */
     protected function create(array $data)
     {
-        Mail::send('mail.company_registration', ['d' => $data], function ($m) use ($data) {
+        Mail::send(['text' => 'mail.company_registration'], ['d' => $data], function ($m) use ($data) {
             $m->from('markflow@178inaba.com', 'markflow');
             $m->to($data['mail'], $data['user_name'])->subject('your company registration!');
         });
