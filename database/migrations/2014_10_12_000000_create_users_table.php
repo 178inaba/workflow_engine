@@ -24,7 +24,7 @@ class CreateUsersTable extends Migration
 
             // primary
             $table->primary(['company_id', 'id']);
-            $table->unique(['company_id', 'email']);
+            $table->unique(['company_id', 'mail']);
         });
     }
 
