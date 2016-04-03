@@ -23,15 +23,15 @@
                 </div>
               </div>
 
-              <div class="form-group{if $errors->has('email')} has-error{/if}">
+              <div class="form-group{if $errors->has('mail')} has-error{/if}">
                 <label class="col-md-4 control-label">E-Mail Address</label>
 
                 <div class="col-md-6">
-                  <input type="email" class="form-control" name="email" value="{old('email')}">
+                  <input type="email" class="form-control" name="mail" value="{old('mail')}">
 
-                  {if $errors->has('email')}
+                  {if $errors->has('mail')}
                     <span class="help-block">
-                      <strong>{$errors->first('email')}</strong>
+                      <strong>{$errors->first('mail')}</strong>
                     </span>
                   {/if}
                 </div>
