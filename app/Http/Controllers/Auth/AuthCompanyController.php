@@ -68,9 +68,10 @@ class AuthCompanyController extends Controller
         ]);
 
         return User::create([
+            'company_id' => $data['company_id'],
             'id' => $data['user_id'],
             'name' => $data['user_name'],
-            'email' => $data['mail'],
+            'mail' => $data['mail'],
             // TODO const or toml setting
             'authority' => 1,
         ]);
