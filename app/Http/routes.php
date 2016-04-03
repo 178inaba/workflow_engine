@@ -13,9 +13,6 @@
 
 Route::get('/', 'IndexController@index');
 
-Route::get('/company_register', 'CompanyController@showRegistrationForm');
-Route::post('/company_register', 'CompanyController@register');
-//Route::post('/task', 'TaskController@store');
-//Route::delete('/task/{task}', 'TaskController@destroy');
+Route::post('/company_registration', 'Auth\AuthCompanyController@register');
 
 Route::auth();
