@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 use App\Http\Controllers\Controller;
+
+use Auth;
+use Illuminate\Http\Request;
 
 class IndexController extends Controller
 {
@@ -13,7 +14,7 @@ class IndexController extends Controller
      */
     public function index(Request $req)
     {
-        if ($req->user()) {
+        if (Auth::check()) {
             // login
             return view('user.index');
         } else {
