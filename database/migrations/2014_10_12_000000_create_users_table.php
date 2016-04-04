@@ -14,7 +14,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->increments('id');
-            $tabke->string('company_id', 64)->index();
+            $table->string('company_id', 64)->index();
             $table->string('system_name', 64);
             $table->string('name', 255);
             $table->string('email', 255);
