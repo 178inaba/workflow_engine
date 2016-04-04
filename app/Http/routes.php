@@ -11,8 +11,6 @@
 |
 */
 
-Route::get('/', 'IndexController@index');
-
-Route::post('/company_registration', 'Auth\AuthCompanyController@register');
-
-Route::auth();
+Route::get('/', function () {
+    return view('welcome');
+});

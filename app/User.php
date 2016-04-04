@@ -12,7 +12,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'company_id', 'id', 'name', 'mail', 'password', 'authority',
+        'name', 'email', 'password',
     ];
 
     /**
@@ -23,12 +23,4 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    /**
-     * company
-     */
-    public function company()
-    {
-        return $this->belongsTo(Company::class);
-    }
 }
